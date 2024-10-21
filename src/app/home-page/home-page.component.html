@@ -1,0 +1,19 @@
+<p>home-page works!</p>
+
+<mat-grid-list cols="4" rowHeight="1:1.5">
+    <div>
+        <mat-grid-tile *ngFor="let item of items;">
+            <div>
+                <div>
+                    <img style="margin:4px; width: 90%; height: 50%;" src="assets/images/default-product-image.png">
+                </div>
+                <div style="font-size: 10px;">
+                    {{item.name}} <br>
+                    Price: Rs {{item.price}} only. <br>
+                    Description: {{item.description}} <br>
+                </div>
+                <button (click)="addToCart(item)">ADD</button>
+            </div>
+        </mat-grid-tile>
+    </div>
+</mat-grid-list>
